@@ -1,8 +1,0 @@
-cafelito\model\Order.class
-cafelito\repo\OrderRepository.class
-cafelito\model\CoffeeShop$Point.class
-cafelito\controller\CafelitoController.class
-cafelito\model\CoffeeShop.class
-cafelito\DemoApplication.class
-cafelito\repo\CoffeeRepository.class
-cafelito\model\DrinkType.class
