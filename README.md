@@ -1,7 +1,3 @@
 Cafelito - Give Me Coffee!!
 ========
-
-This is spring equivalent of the application developed in Trisha Gee's html5-angularjs-groovy-java-and-mongodb-all-together-what-could-go-wrong talk.
-Please refer original repo below for more info:
-
-https://github.com/trishagee/cafelito
+This is a Demoable coffeshop Application using best of breed technologies as in MongoDB from NOSQL world,Angular JS from frontend world and Spring from Java framework world.
