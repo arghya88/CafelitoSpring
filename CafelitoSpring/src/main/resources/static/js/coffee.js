@@ -2,7 +2,7 @@ var coffeeApp = angular.module('coffeeApp', ['ngResource', 'ui.bootstrap']);
 
 
 coffeeApp.factory('CoffeeShopLocator', function ($resource) {
-    return $resource('/coffeeshop/nearest/latitude/:latitude/longitude/:longitude',
+    return $resource('/coffeeshop/nearest',
         {latitude: '@latitude', longitude: '@longitude'}, {});
 });
 
@@ -21,7 +21,7 @@ coffeeApp.controller('CoffeeShopController', function ($scope, $window, CoffeeSh
             .catch(
             function (value) {
                 //default coffee shop
-                $scope.getCoffeeShopAt(51.4994678, -0.128888);
+                $scope.getCoffeeShopAt(12.9350891,77.6134262);
             });
     };
 });
