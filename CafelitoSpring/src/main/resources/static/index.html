@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="coffeeApp">
 <head>
-<title>Trisha's amazing cafelito application modified to use
-	spring</title>
+<title>StarBucks CoffeeShop</title>
 <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 <body>
 
 	<div ng-controller="CoffeeShopController" class="container">
-    <div class="panel panel-default" ng-show="nearestCoffeeShop">
-        <div class="panel-body">
-            Your coffee will be ready for pick up at: <strong> {{nearestCoffeeShop.name}} </strong>
-            <a ng-href="https://maps.google.com/maps/place/@{{nearestCoffeeShop.location.coordinates[1]}},{{nearestCoffeeShop.location.coordinates[0]}},14z">[map]</a>
-        </div>
-    </div>
-</div>
+		<div class="form-group">
+			<input type="button" class="btn btn-default"
+				value="Find my coffee shop" ng-click="findCoffeeShopNearestToMe()"/>
+		</div>
+		<div class="panel panel-default" ng-show="nearestCoffeeShop">
+			<div class="panel-body">
+				<strong> {{nearestCoffeeShop.name}} </strong> <a
+					ng-href="https://maps.google.com/maps/place/Starbucks+Coffee/@{{nearestCoffeeShop.address.location.y}},{{nearestCoffeeShop.address.location.x}},17z">[map]</a>
+			</div>
+		</div>
+	</div>
 
 	<div ng-controller="OrderController" class="container">
 		<alert ng-repeat="message in messages" type="message.type"

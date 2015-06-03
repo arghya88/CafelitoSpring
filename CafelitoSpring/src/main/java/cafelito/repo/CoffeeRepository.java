@@ -5,8 +5,8 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 
 import cafelito.model.CoffeeShop;
 
-public interface CoffeeRepository extends MongoRepository<CoffeeShop,Long> {
+public interface CoffeeRepository extends MongoRepository<CoffeeShop,String> {
 	
-	CoffeeShop findByLocationNear(Point point);
+	CoffeeShop findByAddressLocationNear(Point point);
 
 }

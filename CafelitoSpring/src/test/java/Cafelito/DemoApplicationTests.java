@@ -1,5 +1,6 @@
 package Cafelito;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.web.WebAppConfiguration;
@@ -21,10 +22,12 @@ public class DemoApplicationTests {
 	OrderRepository orderrepo;
 
 	@Test
+	@Ignore
 	public void Test1() {
 		System.out.println(repo.findAll());
 	}
 	@Test
+	@Ignore
 	public void Test2() {
 		System.out.println(orderrepo.findAll());
 	}

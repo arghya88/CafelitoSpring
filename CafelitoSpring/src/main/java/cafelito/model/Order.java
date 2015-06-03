@@ -1,7 +1,8 @@
 package cafelito.model;
 
 import org.springframework.data.annotation.Id;
-
+import org.springframework.data.mongodb.core.mapping.Document;
+@Document(collection="Order")
 public class Order {
 	@Id
     private String id;

@@ -1,30 +1,38 @@
 package cafelito.model;
 
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection="CoffeeShop")
 public class CoffeeShop {
-    private Point location;
+	private @Id String id;
+    private Address address;
     private String name;
-    private long openStreetMapId;
 
-    public String getName() {
-        return name;
-    }
+    public CoffeeShop(String name,Address address) {
+    	this.id=null;
+    	this.name=name;
+    	this.address=address;
+	}
 
-    public Point getLocation() {
-        return location;
-    }
+	public Address getAddress() {
+		return address;
+	}
 
-    public long getOpenStreetMapId() {
-        return openStreetMapId;
-    }
+	public void setAddress(Address address) {
+		this.address = address;
+	}
 
-    public static class Point {
-        private double[] coordinates;
+	public String getName() {
+		return name;
+	}
 
-        public double[] getCoordinates() {
-            return coordinates;
-        }
-    }
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getId() {
+		return id;
+	}
+    
 }
