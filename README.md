@@ -19,7 +19,7 @@ Running the Application
 
 * Import the project into your favourite IDE as existing maven project
 * Do clean build using maven
-* Right click on the DemoApplication.java and run as java applicationor Spring boot App.
+* Right click on the DemoApplication.java and run as java application or Spring boot App.
 
   This will launch the application on port 8090.If this port is already being used by some other application then you need to   change the port mentioned in application.properties to another port which is unused.
 
